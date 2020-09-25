@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MorningRoutineComponent } from './morning-routine/morning-routine.component';
+import { SleepTimesComponent } from './sleep-times/sleep-times.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MorningRoutineComponent
+    MorningRoutineComponent,
+    SleepTimesComponent
   ],
   imports: [
     BrowserModule
