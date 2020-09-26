@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Affirmation } from './affirmation';
+import { Mood } from './mood';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { Affirmation } from './affirmation';
 export class AppComponent {
   title = 'Wellness-Dashboard';
   affirmationList: Affirmation[] = [];
+  moodList: Mood[] = [];
 
   constructor() {
     this.affirmationList = [
@@ -44,6 +46,32 @@ export class AppComponent {
        new Affirmation(30, "Your life isn't yours if you always care what someone else thinks."),
        new Affirmation(31, "The moon reminds me 'You are still whole no matter what phase you're in'."),
     ];
+
+      this.moodList = [
+        new Mood(0, "Choose One"), 
+        new Mood(1, "Cheerful"),
+        new Mood(2, "Calm"),
+        new Mood(3, "Peaceful"),
+        new Mood(4, "Blah"),
+        new Mood(5, "Gloomy"),
+        new Mood(6, "Irritated"),
+        new Mood(7, "Grouchy"),
+        new Mood(8, "Anxious"),
+        new Mood(9, "Concerned"),
+        new Mood(10, "Scared"),
+        new Mood(11, "Confused"),
+        new Mood(12, "Jealous"),
+        new Mood(13, "Guilty"),
+        new Mood(14, "Bored"),
+        new Mood(15, "Ashamed"),
+        new Mood(16, "Excited"),
+        new Mood(17, "Thankful"),
+        new Mood(18, "Disappointed"),
+        new Mood(19, "Lost"),
+        new Mood(20, "Heartbroken"),
+        new Mood(21, "Other"),
+      ];
+
  }
 
 }

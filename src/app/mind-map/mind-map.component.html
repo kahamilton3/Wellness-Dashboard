@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap">
+
+<h3 id="mindMapHeader">Mind Map:</h3>
+<div class="mindMap">
+    <label>Mood: <select #myMood (change)="true" name="mood"><option *ngFor ="let mood of moods" value="{{mood.id}}">{{mood.emotion}}</option></select></label>
+    <span class="otherMood" *ngIf ="myMood.value === '21'"><input type="text" name="otherMood"/></span>
+    <br><label>Thoughts: <textarea name="moodThoughts"></textarea></label><br>
+    <label>Actions: <textarea name="moodActions"></textarea></label>
+</div>
