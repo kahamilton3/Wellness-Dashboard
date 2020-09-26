@@ -6,6 +6,7 @@ import { MorningRoutineComponent } from './morning-routine/morning-routine.compo
 import { SleepTimesComponent } from './sleep-times/sleep-times.component';
 import { DailyAffirmationComponent } from './daily-affirmation/daily-affirmation.component';
 import { MindMapComponent } from './mind-map/mind-map.component';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { MindMapComponent } from './mind-map/mind-map.component';
     MorningRoutineComponent,
     SleepTimesComponent,
     DailyAffirmationComponent,
-    MindMapComponent
+    MindMapComponent,
+    ToDoListComponent
   ],
   imports: [
     BrowserModule

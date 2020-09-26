@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap">
+
+<h3 id="toDoListHeader">To Do List:</h3>
+<div class="toDoList">
+    <div>
+        <ol>
+            <li (click)='markComplete(task)' *ngFor ="let task of tasks">{{task}}</li>
+        </ol>
+        <label>Add task: <input #newTask (keyup.enter)='addTask(newTask.value); newTask.value = ""' type="text" name="toDoTask"/></label>
+        <button (click)='addTask(newTask.value); newTask.value = ""'>Add</button>
+    </div><hr>
+    <div>
+        <h4>Completed Tasks: </h4>
+        <ol>
+            <li class="done" *ngFor ="let finishedTask of finishedTasks">{{finishedTask}}</li>
+        </ol>
+    </div>
+    
+</div>
