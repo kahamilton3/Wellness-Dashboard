@@ -9,6 +9,7 @@ import { Affirmation } from '../affirmation';
 export class DailyAffirmationComponent implements OnInit {
   @Input() affirmations: Affirmation[];
   randomAffirmation: string;
+  randomNumber: number = Math.floor(Math.random()*31)
 
   constructor() {
     this.randomAffirmation = "";
@@ -19,8 +20,7 @@ export class DailyAffirmationComponent implements OnInit {
 
   pickAffirmation(){
     let random: string = this.affirmations[Math.floor(Math.random()*31)].quote;
-    this.randomAffirmation = random;
-    return this.randomAffirmation; 
+    this.randomAffirmation = random; 
   }
 
 }
