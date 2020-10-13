@@ -7,6 +7,7 @@ import { SleepTimesComponent } from './sleep-times/sleep-times.component';
 import { DailyAffirmationComponent } from './daily-affirmation/daily-affirmation.component';
 import { MindMapComponent } from './mind-map/mind-map.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
+import { IntermittentFastingComponent } from './intermittent-fasting/intermittent-fasting.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
     SleepTimesComponent,
     DailyAffirmationComponent,
     MindMapComponent,
-    ToDoListComponent
+    ToDoListComponent,
+    IntermittentFastingComponent
   ],
   imports: [
     BrowserModule
