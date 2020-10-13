@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap">
+
+<h3 id="goalsHeader">Goals:</h3>
+<div class="goals">
+    <div>
+        <ol>
+            <li (click)='markComplete(goal)' *ngFor ="let goal of goals">{{goal}}</li>
+        </ol>
+        <label>Add goal: <input #newGoal (keyup.enter)='addGoal(newGoal.value); newGoal.value = ""' type="text" name="addGoal"/></label>
+        <button (click)='addGoal(newGoal.value); newGoal.value = ""'>Add</button>
+    </div><hr>
+    <div>
+        <h4>Completed Goals: </h4>
+        <ol>
+            <li class="done" *ngFor ="let metGoal of metGoals">{{metGoal}}</li>
+        </ol>
+    </div>    
+</div>
