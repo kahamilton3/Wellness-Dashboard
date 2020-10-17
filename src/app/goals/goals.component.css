@@ -23,3 +23,13 @@
 .done {
     text-decoration: line-through;
 }
+
+h4 {
+    margin-right: 10px;
+    margin-bottom: 0px;
+    display: inline-block;
+  }
+
+  ul {
+    margin-top: 0px;
+  }

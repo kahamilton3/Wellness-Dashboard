@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class GoalsComponent implements OnInit {
   goals = [];
   metGoals = [];
+  storedIncentives = [];
+  earnedIncentives = [];
+  errorIncentive = "";
 
   constructor() { }
 
@@ -21,8 +24,31 @@ export class GoalsComponent implements OnInit {
   }
 
   markComplete(metGoal: string){
-    this.goals.splice(this.goals.indexOf(metGoal),1);
-    this.metGoals.push(metGoal);
+    if (this.storedIncentives.length === 0){
+      this.errorIncentive = "MUST ADD MORE INCENTIVES!";
+    } else {
+      this.errorIncentive = "";
+      this.goals.splice(this.goals.indexOf(metGoal),1);
+      this.metGoals.push(metGoal);
+      if (this.metGoals.length > 5) {
+        this.metGoals.shift();
+      }
+      this.earnedIncentives.push(this.storedIncentives[0]);
+      this.storedIncentives.shift();
+    }
   }
 
+  clearCompletedGoal(){
+    this.metGoals = [];
+  }
+
+  addIncentive(newIncentive: string){
+    if(!this.storedIncentives.includes(newIncentive) && newIncentive !== ""){
+      this.storedIncentives.push(newIncentive);
+    }
+  }
+
+  clearIncentives(){
+    this.earnedIncentives = [];
+  }
 }

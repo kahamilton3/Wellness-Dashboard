@@ -9,11 +9,18 @@
         </ol>
         <label>Add goal: <input #newGoal (keyup.enter)='addGoal(newGoal.value); newGoal.value = ""' type="text" name="addGoal"/></label>
         <button (click)='addGoal(newGoal.value); newGoal.value = ""'>Add</button>
+        <h4 id="completedGoals">Completed Goals: </h4><button (click)='clearCompletedGoal()'>clear</button>
+        <ul style="list-style-type:none;">
+            <li class="done" *ngFor ="let metGoal of metGoals">{{metGoal}}</li>
+        </ul>
     </div><hr>
     <div>
-        <h4>Completed Goals: </h4>
-        <ol>
-            <li class="done" *ngFor ="let metGoal of metGoals">{{metGoal}}</li>
-        </ol>
+        <h4>Incentives: </h4><button (click)='clearIncentives()'>clear</button>
+        <ul style="list-style-type:none;">
+            <li *ngFor ="let earnedIncentive of earnedIncentives">{{earnedIncentive}}<input type="checkbox"/></li>
+        </ul>
+        <p>{{errorIncentive}}</p>
+        <label>Add incentive: <input #newIncentive (keyup.enter)='addIncentive(newIncentive.value); newIncentive.value = ""' type="text" name="addIncentive"/></label>
+        <button (click)='addIncentive(newIncentive.value); newIncentive.value = ""'>Add</button>
     </div>    
 </div>
