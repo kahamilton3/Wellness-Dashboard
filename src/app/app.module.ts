@@ -10,6 +10,7 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { IntermittentFastingComponent } from './intermittent-fasting/intermittent-fasting.component';
 import { DailyActivitiesComponent } from './daily-activities/daily-activities.component';
 import { GoalsComponent } from './goals/goals.component';
+import { BedtimeRoutineComponent } from './bedtime-routine/bedtime-routine.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { GoalsComponent } from './goals/goals.component';
     ToDoListComponent,
     IntermittentFastingComponent,
     DailyActivitiesComponent,
-    GoalsComponent
+    GoalsComponent,
+    BedtimeRoutineComponent
   ],
   imports: [
     BrowserModule

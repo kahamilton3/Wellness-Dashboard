@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap">
+
+<h3 id="bedtimeHeader">Bedtime Routine:</h3>
+<div class="bedtime">
+    <div>
+    <label>Sleepy Time Tea <input type="checkbox" name="drinkTea"/></label><br>
+    <label>Record Gratitude <input type="checkbox" name="gratitude"/></label><br>
+    <label>Record Savor Moment <input type="checkbox" name="savor"/></label><br>
+    <label>Read <input type="checkbox" name="read"/></label><br>
+    <label>Record Bed Time <input type="checkbox" name="bedtime"/></label>
+    </div><hr>
+    <div>
+        <h4>Gratitude: </h4><button (click)='clearGratitudeList()'>reset</button>
+        <ul>
+            <li *ngFor ="let gratitude of gratitudeList">{{gratitude}}</li>
+        </ul>
+        <label>Add gratitude: <input #newGratitude (keyup.enter)='addGratitude(newGratitude.value); newGratitude.value = ""' type="text" name="addGratitude"/></label>
+        <button (click)='addGratitude(newGratitude.value); newGratitude.value = ""'>Add</button>
+    </div>
+    <div>
+        <h4>Savor Moment: </h4><button (click)='clearSavorList()'>reset</button>
+        <ul>
+            <li *ngFor ="let savor of savorList">{{savor}}</li>
+        </ul>
+        <label>Add savor moment: <input #newSavor (keyup.enter)='addSavor(newSavor.value); newSavor.value = ""' type="text" name="addSavor"/></label>
+        <button (click)='addSavor(newSavor.value); newSavor.value = ""'>Add</button>
+    </div>
+</div>
